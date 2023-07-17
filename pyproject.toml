@@ -1,0 +1,32 @@
+[tool.pytest.ini_options]
+asyncio_mode="auto"
+
+[tool.poetry]
+name = "smit-task"
+version = "0.1.0"
+description = ""
+authors = ["Tim"]
+readme = "README.md"
+packages = [{include = "smit_task"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.100.0"
+python-dotenv = "^1.0.0"
+tortoise-orm = {extras = ["asyncpg"], version = "^0.19.3"}
+uvicorn = "^0.23.0"
+aerich = "^0.7.1"
+pydantic = "^2.0.3"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.1"
+httpx = "^0.24.1"
+
+
+
+[tool.aerich]
+tortoise_orm = "app.settings.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
