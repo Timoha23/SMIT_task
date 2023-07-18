@@ -14,7 +14,7 @@
   "2020-06-01": [
     {
       "cargo_type": "Glass",
-            "rate": 0.25
+      "rate": 0.25
     },
     {
       "cargo_type": "Other",
